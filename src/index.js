@@ -339,8 +339,8 @@ export default class PageList extends PureComponent {
             : this.props.renderItem({ item, index });
 
         const layout = {
-            width,
-            height,
+            width: Dimensions.get("window").width,
+            height: Dimensions.get("window").height,
             position: "relative"
         };
         const style = page.props.style ? [page.props.style, layout] : layout;
